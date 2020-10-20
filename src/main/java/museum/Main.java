@@ -16,9 +16,14 @@ public class Main {
         fourthVisitor.visit(museumExhibition);
 
         System.out.println(museumExhibition);
+
+        System.out.println("~~~~~~~~~~~~~~~~");
+        museumExhibition.showExhibits();
+        System.out.println("~~~~~~~~~~~~~~~~");
+        museumExhibition.showVisitors();
     }
 
-    static List<Visitor> getVisitors() {
+    private static List<Visitor> getVisitors() {
         Visitor firstVisitor = new Visitor("Olena", "Smola", 23);
         Visitor secondVisitor = new Visitor("Oleh", "Smola", 27);
         Visitor thirdVisitor = new Visitor("Dmytro", "Kusiaka", 33);
@@ -29,7 +34,7 @@ public class Main {
                 fourthVisitor, fifthVisitor, sixthVisitor);
     }
 
-    static List<Exhibit> getExhibits() {
+    private static List<Exhibit> getExhibits() {
         Exhibit firstExhibit = new Exhibit("Gun", 45);
         Exhibit secondExhibit = new Exhibit("Sculpture", 27);
         Exhibit thirdExhibit = new Exhibit("Picture", 133);
@@ -39,5 +44,6 @@ public class Main {
         return List.of(firstExhibit, secondExhibit, thirdExhibit,
                 fourthExhibit, fifthExhibit, sixthExhibit);
     }
+
 }
 

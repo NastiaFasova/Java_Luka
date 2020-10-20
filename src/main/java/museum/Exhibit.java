@@ -1,5 +1,6 @@
 package museum;
 
+//Композиция между Exhibit и Exhibition
 public class Exhibit {
     private String name;
     private int age;

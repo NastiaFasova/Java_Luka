@@ -3,6 +3,7 @@ package museum;
 import museum.exceptions.NotEnoughExhibitsException;
 
 import java.time.LocalDate;
+import java.util.Iterator;
 import java.util.List;
 
 public class MuseumExhibition extends EntertainmentPlace implements Educatable {
@@ -27,10 +28,15 @@ public class MuseumExhibition extends EntertainmentPlace implements Educatable {
         return typeOfExhibition;
     }
 
+    public List<Exhibit> getExhibits() {
+        return exhibits;
+    }
+
     public void educate() {
         System.out.println("This museum exhibition educates people");
     }
 
+    //nested class
     public static class Manager extends Human {
         public Manager(String name, String surname, int age) {
             super(name, surname, age);
@@ -47,4 +53,21 @@ public class MuseumExhibition extends EntertainmentPlace implements Educatable {
     }
 
 
+    //creating of Iterator
+    public void showExhibits() {
+        List<Exhibit> exhibits = getExhibits();
+        Iterator<Exhibit> iterator = exhibits.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+
+    //creating of Iterator
+    public void showVisitors() {
+        List<Visitor> visitors = getVisitors();
+        Iterator<Visitor> iterator = visitors.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
 }

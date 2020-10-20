@@ -3,6 +3,7 @@ package museum;
 import java.util.ArrayList;
 import java.util.List;
 
+//Асоциация между Visitor и Exhibition
 public class Visitor extends Human {
 
     public Visitor(String name, String surname, int age) {
