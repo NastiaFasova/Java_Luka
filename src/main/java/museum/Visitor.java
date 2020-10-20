@@ -19,4 +19,9 @@ public class Visitor extends Human {
         visitors.add(visitor);
         place.setVisitors(visitors);
     }
+
+    @Override
+    public String greet() {
+        return super.greet() + " I like visiting museums ";
+    }
 }

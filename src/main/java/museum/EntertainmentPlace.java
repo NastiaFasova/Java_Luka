@@ -1,7 +1,6 @@
 package museum;
 
 import museum.exceptions.NotEnoughVisitorsException;
-
 import java.time.LocalDate;
 import java.util.List;
 

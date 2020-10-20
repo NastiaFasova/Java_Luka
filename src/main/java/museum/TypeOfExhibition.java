@@ -13,18 +13,23 @@ public enum TypeOfExhibition {
     }
 
     public static String showTypeOfMuseumExhibition() {
-        System.out.print("TypeOfWarrior enum: ");
+        System.out.print("TypeOfMuseum enum: ");
         StringBuilder stringBuilder = new StringBuilder();
         for (TypeOfExhibition typeOfExhibition : TypeOfExhibition.values()) {
             if (typeOfExhibition.price != 0) {
                 stringBuilder.append(typeOfExhibition)
                         .append("price: ")
                         .append(typeOfExhibition.price)
-                        .append("; ");
+                        .append(", ");
             } else {
                 stringBuilder.append(typeOfExhibition);
             }
         }
         return stringBuilder.substring(0, stringBuilder.length() - 2);
+    }
+
+    @Override
+    public String toString() {
+        return name().toLowerCase();
     }
 }

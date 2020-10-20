@@ -14,6 +14,7 @@ public class Main {
 
         Visitor fourthVisitor = new Visitor("Dmytro", "Franko", 33);
         fourthVisitor.visit(museumExhibition);
+        System.out.println(fourthVisitor.greet());
 
         System.out.println(museumExhibition);
 
@@ -21,6 +22,7 @@ public class Main {
         museumExhibition.showExhibits();
         System.out.println("~~~~~~~~~~~~~~~~");
         museumExhibition.showVisitors();
+        System.out.println(TypeOfExhibition.HISTORICAL.toString());
     }
 
     private static List<Visitor> getVisitors() {

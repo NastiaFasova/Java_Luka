@@ -23,6 +23,10 @@ public abstract class Human {
         return age;
     }
 
+    public String greet() {
+        return "Hello! I'm " + this.name;
+    }
+
     @Override
     public String toString() {
         return "Human{" +
@@ -31,4 +35,5 @@ public abstract class Human {
                 ", age=" + age +
                 '}';
     }
+
 }
